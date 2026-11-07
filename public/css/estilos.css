@@ -1,0 +1,282 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fa;
+    color: #263445;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    background: linear-gradient(120deg, #102d50, #1d527e);
+    color: white;
+    padding: 48px 20px;
+    border-bottom: 5px solid #3c91c9;
+}
+
+.encabezado-contenido {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.identidad {
+    text-align: center;
+}
+
+.etiqueta,
+.subtitulo {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #75bce9;
+    margin-bottom: 10px;
+}
+
+.encabezado h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    font-size: 16px;
+    color: #dce8f4;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor {
+    max-width: 1150px;
+    margin: 45px auto;
+    padding: 0 22px;
+}
+
+/* PRESENTACIÓN */
+
+.presentacion {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 42px;
+    border-left: 5px solid #3287bd;
+    box-shadow: 0 3px 14px rgba(20, 48, 75, 0.06);
+}
+
+.presentacion h2 {
+    color: #12345a;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.presentacion p {
+    max-width: 760px;
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* TÍTULO DE SECCIÓN */
+
+.titulo-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.titulo-seccion h2 {
+    font-size: 25px;
+    color: #12345a;
+}
+
+.contador {
+    background: #e3eff8;
+    color: #245d85;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* TARJETAS */
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.video-card {
+    background: white;
+    padding: 23px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(20, 48, 75, 0.08);
+    border: 1px solid #e5ebf1;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(20, 48, 75, 0.12);
+}
+
+.video-etiqueta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #397ca8;
+}
+
+.estado {
+    background: #e2f5e9;
+    color: #267344;
+    padding: 5px 10px;
+    border-radius: 20px;
+    letter-spacing: 0;
+}
+
+.estado.pendiente {
+    background: #fff3d8;
+    color: #936515;
+}
+
+.video-card h3 {
+    color: #12345a;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.descripcion {
+    color: #718096;
+    font-size: 14px;
+    min-height: 45px;
+    margin-bottom: 18px;
+}
+
+/* REPRODUCTORES */
+
+.reproductor {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #101820;
+    overflow: hidden;
+    border-radius: 9px;
+}
+
+.reproductor iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.reproductor-pendiente {
+    background: linear-gradient(135deg, #e9f0f7, #dce7f1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mensaje-pendiente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 9px;
+    padding: 15px;
+    color: #526b82;
+}
+
+.icono-video {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1c527c;
+    color: white;
+    font-size: 21px;
+}
+
+.mensaje-pendiente strong {
+    color: #12345a;
+    font-size: 15px;
+}
+
+.mensaje-pendiente span:last-child {
+    font-size: 12px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: #102d50;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 55px;
+}
+
+footer p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+footer span {
+    color: #c2d3e3;
+    font-size: 12px;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 750px) {
+
+    .encabezado {
+        padding: 35px 18px;
+    }
+
+    .encabezado h1 {
+        font-size: 27px;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-seccion {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .presentacion {
+        padding: 23px;
+    }
+
+    .contenedor {
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .encabezado h1 {
+        font-size: 23px;
+    }
+
+    .video-card {
+        padding: 15px;
+    }
+}
